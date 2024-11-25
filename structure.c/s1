@@ -1,0 +1,37 @@
+#include<stdio.h>
+struct bill
+{
+    int cus[3];
+    int rate;
+    int qtu;
+    int amt;
+    int dis;
+    int billmat;
+    int gst;
+    int netbill;
+};
+int main()
+{
+    struct bill s1[3];
+    for(int i=0;i<3;i++)
+    {
+        printf("enter the custmer:");
+        scanf("%d",&s1[i].cus);
+        printf("Enter ret:");
+        scanf("%d",&s1[i].rate);
+        printf("Enter quntity:");
+        scanf("%d",&s1[i].qtu);
+        s1[i].amt = s1[i].rate * s1[i].qtu;
+        s1[i].dis = s1[i].amt * 5 / 100;
+        s1[i].billmat = s1[i].amt - s1[i].dis;
+        s1[i].gst = s1[i].amt * 28 / 100;
+        s1[i].netbill = s1[i].billmat + s1[i].gst;
+        printf("amt:%d\n",s1[i].amt);
+        printf("dis:%d\n",s1[i].dis);
+        
+        printf("billmat:%d\n",[i].billmat);
+        printf("gst:%d\n",s1[i].gst);
+        printf("netbill:%d",s1[i].netbill);
+    }
+    return 0;
+}
